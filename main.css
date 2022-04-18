@@ -195,7 +195,7 @@ ion-icon{
 
 .hide{
 	color: #faf0e6;
-	transition: 1s ease-in;
+	transition: 1000s ease-in;
 }
 
 .thingsido:hover .hide{
