@@ -1,3 +1,5 @@
 # Akhil Kammila's Personal Website
-coded with html, css, javascript
-used bootstrap framework
+
+I coded this website in high school
+I used html, css, and javascript
+(The information on [the website](https://akhilkammila.github.io/) is outdated, but feel free to give it a look!)
