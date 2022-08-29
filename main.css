@@ -312,6 +312,10 @@ shade 3:  #ffb3ec
     border-top-right-radius: var(--fs-br);
 }
 
+.button-wrapper{
+	display:flex;
+}
+
 /*color related*/
 /*BLUES BLUES BLUES BLUES*/
 .blues > .card > .card__body{
@@ -366,12 +370,12 @@ shade 3:  #ffb3ec
 	box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
 }
 
-.purples > .card > .card__body > .button-activities{
+.purples > .card > .card__body > .button-wrapper > .button-activities{
 	transition: var(--fs-ttime);
 	background-color: var(--fs-purple3);
 }
 
-.purples>.card:hover .button-activities{
+.purples>.card:hover .button-wrapper > .button-activities{
 	transition: var(--fs-ttime);
 	background-color:  var(--fs-purple2);
 }
