@@ -55,6 +55,10 @@ h1,h2,h3,h4{
 	margin: 0;
 }
 
+a{
+	text-decoration:none;
+}
+
 .sen{
 	font-family: "Sen"
 }
@@ -192,6 +196,23 @@ ion-icon{
 }
 
 /*Things I do*/
+
+#about{
+	font-size:25pt;
+}
+
+#skills{
+	font-size:24pt;
+}
+
+#skills-icon-container{
+	display:flex;
+}
+
+.skill-icons{
+	height:70px;
+	margin:15px;
+}
 
 /* .hide{
 	color: #faf0e6;
