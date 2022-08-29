@@ -116,6 +116,10 @@ body{
 	height: 100%;
 }
 
+.navigation-tabs{
+	font-size:16pt;
+}
+
 
 /*Animating the Title Letters*/
 span.titleletter{
