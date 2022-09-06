@@ -319,6 +319,8 @@ shade 3:  #ffb3ec
 
 .button-wrapper{
 	display:flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /*color related*/
@@ -333,12 +335,12 @@ shade 3:  #ffb3ec
 	box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
 }
 
-.blues > .card > .card__body > .button-activities{
+.blues > .card > .card__body > .button-wrapper > .button-activities{
 	transition: var(--fs-ttime);
 	background-color: var(--fs-blue3);
 }
 
-.blues>.card:hover .button-activities{
+.blues>.card:hover .button-wrapper > .button-activities{
 	transition: var(--fs-ttime);
 	background-color:  var(--fs-blue2);
 }
