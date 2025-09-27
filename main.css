@@ -172,6 +172,19 @@ ion-icon{
 	color: #333333;
 }
 
+/* Contact info line under name */
+.contact-info {
+    font-size: var(--fs-h3);
+}
+
+/* Resume section spacing tweaks */
+.resume-section h3 {
+    margin-top: 8px;
+}
+.resume-section ul {
+    margin-top: 4px;
+}
+
 /*Animated Line Divider*/
 #thread1{
 	border-radius: 5px;
