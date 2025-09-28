@@ -55,6 +55,10 @@
 					<li class="nav-item">
 						<a href="#volunteering" class="nav-link navigation-tabs">experience</a>
 					</li>
+
+					<li class="nav-item">
+						<a href="#resume" class="nav-link navigation-tabs">resume</a>
+					</li>
 				</ul>
 
 			</div>		
@@ -89,11 +93,14 @@
 				<a href="https://github.com/akhilkammila" class="social-icon" target="_blank">
 					<ion-icon name="logo-github"></ion-icon>
 				</a>
-				<a href="https://www.linkedin.com/in/akhil-kammila-00966222b/" class="social-icon" target="_blank">
+				<a href="https://www.linkedin.com/in/akhilkammila" class="social-icon" target="_blank">
 					<ion-icon name="logo-linkedin"></ion-icon>
 				</a>
 				<a href="mailto:akhilkammila@gmail.com" class="social-icon" target="_blank">
 					<ion-icon name="mail-outline"></ion-icon>
+				</a>
+				<a href="tel:+16039301612" class="social-icon" target="_blank">
+					<ion-icon name="call-outline"></ion-icon>
 				</a>
 			</div>
 
@@ -103,6 +110,138 @@
 				<img class="img-fluid" src="images/logo.png">
 			</div>
 			
+		</div>
+	</section>
+
+	<!-- Resume -->
+	<section class="p-5 container" id="resume">
+		<div class="row text-center pb-3" data-aos="fade-up" data-aos-duration="700">
+			<h2>resume</h2>
+			<p class="mt-2">
+				<b>Akhil Kammila</b><br>
+				<a href="mailto:akhilkammila@gmail.com">akhilkammila@gmail.com</a>
+				|
+				<a href="tel:+16039301612">603-930-1612</a>
+				|
+				<a href="https://github.com/akhilkammila" target="_blank" rel="noopener">github.com/akhilkammila</a>
+				|
+				<a href="https://linkedin.com/in/akhilkammila" target="_blank" rel="noopener">linkedin.com/in/akhilkammila</a>
+			</p>
+		</div>
+
+		<!-- Education -->
+		<div class="row pb-4" data-aos="fade-up" data-aos-duration="700">
+			<h3>Education</h3>
+			<div class="col-12">
+				<div class="d-flex justify-content-between flex-wrap">
+					<div>
+						<h5 class="mb-1">Georgia Institute of Technology</h5>
+						<div>Major in Computer Science • Cumulative GPA: 4.00/4.00</div>
+						<div>Activities: Trading Club, Competitive Programming, Startup Exchange</div>
+					</div>
+					<div class="text-end">
+						<div>Atlanta, GA</div>
+						<div>Aug. 2022 – May. 2025</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Experience -->
+		<div class="row pb-4" data-aos="fade-up" data-aos-duration="700">
+			<h3>Experience</h3>
+			<div class="col-12">
+				<div class="d-flex justify-content-between flex-wrap mb-2">
+					<div>
+						<h5 class="mb-1">Jane Street</h5>
+						<div>Incoming Quantitative Trader Intern</div>
+					</div>
+					<div class="text-end">
+						<div>New York, NY</div>
+						<div>May 2025</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between flex-wrap mb-2">
+					<div>
+						<h5 class="mb-1">Optiver</h5>
+						<div>Quantitative Trader Intern</div>
+						<ul class="mb-2">
+							<li>Traded TSLA options using Optiver systems on a simulated environment</li>
+							<li>Learned options theory, played trading games, shadowed traders, mastered Optiver systems</li>
+						</ul>
+					</div>
+					<div class="text-end">
+						<div>Chicago, IL</div>
+						<div>June 2024 – Aug. 2024</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between flex-wrap mb-2">
+					<div>
+						<h5 class="mb-1">MathWorks</h5>
+						<div>Software Engineering Intern | C++, Java, Docker, Bash</div>
+						<ul class="mb-2">
+							<li>Developed a C++ microservice enabling MATLAB documentation hosting on a background process</li>
+							<li>Containerized Doccenter, a Java web app serving search requests on mathworks.com</li>
+						</ul>
+					</div>
+					<div class="text-end">
+						<div>Natick, MA</div>
+						<div>May 2023 – Aug. 2023</div>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-between flex-wrap mb-2">
+					<div>
+						<h5 class="mb-1">MIT PRIMES</h5>
+						<div>Student Researcher | C, Python</div>
+						<ul class="mb-2">
+							<li>Conducted research alongside mentor Kyle Hogan in a prestigious HS research program</li>
+							<li>Developed an upgraded protocol for the Tor handshake</li>
+							<li>Improved censorship resistance, latency, and packet size of the handshake by modifying the certificate authentication process and message ordering</li>
+						</ul>
+					</div>
+					<div class="text-end">
+						<div>Cambridge, MA</div>
+						<div>Jan. 2021 - Jan. 2022</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Projects -->
+		<div class="row pb-4" data-aos="fade-up" data-aos-duration="700">
+			<h3>Projects</h3>
+			<div class="col-12">
+				<h5 class="mb-1">Leetcode Testcase Extractor | Python, Docker, AWS</h5>
+				<ul class="mb-3">
+					<li>Developed a selenium bot to find hidden testcases by solving LeetCode problems one testcase at a time</li>
+					<li>Overcame issues such as submission limits, reCAPTCHAs, testcase overflow, varying problem types, CPU utilization, multiprocessing conflicts, and copy-paste access</li>
+					<li>Created robust wrapper classes for logging, screenshotting, and error handling to minimize downtime</li>
+					<li>Packaged the bot in a 270MB Alpine Linux Docker image to enable multiprocessing</li>
+					<li>Scaled to 10+ EC2 instances with scripts that spin up containers automatically; extracted 1M+ characters of testcases across 100+ problems</li>
+					<li>Built a second bot that screenshots 1200+ solution editorials and 2700+ problem descriptions in under 2 hours</li>
+					<li>Averaging 800+ GitHub page views daily, 400+ stars</li>
+				</ul>
+
+				<h5 class="mb-1">Some Other Projects</h5>
+				<ul>
+					<li>Script and website to notify users when GT classes open during registration; deployed to AWS; used by 15+ people</li>
+					<li>Bot to automatically fill attendance forms for GT clubs; improved Competitive Programming club’s attendance by 100%+</li>
+					<li>WordHunt solver accounting for input speed; achieved 25% higher scores and 40% better win rate vs. online solvers</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Skills -->
+		<div class="row pb-4" data-aos="fade-up" data-aos-duration="700">
+			<h3>Skills</h3>
+			<div class="col-12">
+				<div><b>Languages and Tools:</b> Python, C++, C, Docker, AWS, Bash, Git, Linux</div>
+				<div><b>Interests:</b> Catan, Spikeball, Competitive Programming, Board Games, Fantasy Football</div>
+				<div><b>Other:</b> Valedictorian (1/450), 4x AIME, Coca-Cola and US Presidential Scholar Semifinalist, 1590 SAT</div>
+			</div>
 		</div>
 	</section>
 
