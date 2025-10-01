@@ -91,7 +91,7 @@ h4{font-size:  var(--fs-h4);}
 body{
 	font-family: "Sen";
 	line-height:  1.6;
-	background: #faf0e6;
++	background: #f5f5f5;
 	cursor: none;
 	margin: 0;
 	padding:  0;
@@ -129,7 +129,7 @@ span.titleletter{
 }
 
 span.titleletter.animated{
-	color: #edb18d;
++	color: #777;
 	animation: bounce 0.5s cubic-bezier(.17,-0.58,.61,.95) 2 alternate;
 }
 
@@ -151,7 +151,7 @@ div.cursor div{
 	position: absolute;
 	width: 10px;
 	height: 10px;
-	background-color: #c8bcb4;
++	background-color: #ccc;
 	border-radius: 50%;
 	box-sizing:  border-box;
 	pointer-events: none;
@@ -173,28 +173,23 @@ ion-icon{
 }
 
 /*Animated Line Divider*/
-#thread1{
++#thread1, #thread2, #thread3 {
 	border-radius: 5px;
 	top: 20px;
 	height:  10px;
-	animation:  dash1 9s ease-in-out infinite;
++	background-color: #ddd;
++	animation:  dash 9s ease-in-out infinite;
 }
 
 #thread2{
-	border-radius: 5px;
-	top: 20px;
-	height:  10px;
-	animation:  dash1 9s ease-in-out infinite 3s;
++	animation-delay: 3s;
 }
 
 #thread3{
-	border-radius: 5px;
-	top: 20px;
-	height:  10px;
-	animation:  dash1 9s ease-in-out infinite 6s;
++	animation-delay: 6s;
 }
 
-@keyframes dash1{
++@keyframes dash{
 	0%{width: 100%;}
 	100%{width: 0%;}
 }
@@ -223,190 +218,65 @@ ion-icon{
 	margin:6px;
 }
 
-/* .hide{
-	color: #faf0e6;
-	transition: 1000s ease-in;
-}
-
-.thingsido:hover .hide{
-	color: #212529;
-	transition: 0.3s;
-} */
-
 /*Cards*/
-/*
-blues
-shade 1: #e8fcfc
-shade 2: #d2f9f9
-shade3: #bbf6f6
-
-greens
-shade 1:  #f5fee7
-shade 2: #ebfdce
-shade 3: #e0fcb4
-
-purples
-shade 1:  #ffe6f9
-shade 2:  #ffccf2
-shade 3:  #ffb3ec
-
-*/
-
 .space{
 	margin-bottom: 30px;
 }
 
 :root{
-	--fs-b: 6px solid #aaaaaa;
-	--fs-br:  20px;
-	--fs-ttime:  0.3s;
-
-	--fs-blue1: #e8fcfc;
-	--fs-blue2: #d2f9f9;
-	--fs-blue3: #bbf6f6;
-
-	--fs-green1: #f5fee7;
-	--fs-green2: #ebfdce;
-	--fs-green3: #e0fcb4;
-
-	--fs-purple1:  #ffe6f9;
-	--fs-purple2:  #ffccf2;
-	--fs-purple3:  #ffb3ec;
++	--card-border-color: #ddd;
++	--card-border-radius:  20px;
++	--card-transition-time:  0.3s;
++	--card-bg-color: #fff;
++	--card-hover-bg-color: #f9f9f9;
++	--button-bg-color: #eee;
++	--button-hover-bg-color: #e0e0e0;
 }
 
 .card {
-	border: none;
-	/*pale background color*/
-    background-color: #faf0e6;
++	border: 1px solid var(--card-border-color);
++    background-color: var(--card-bg-color);
     height: 100%;
     margin: 5%;
++	border-radius: var(--card-border-radius);
++	transition: var(--card-transition-time);
++}
++
++.card:hover {
++	background-color: var(--card-hover-bg-color);
++	box-shadow: 0 10px 20px rgba(0,0,0,0.1);
++	transform: translateY(-5px);
 }
 
 .card__image{
 	width: 100%;
-	transition: var(--fs-ttime);
++	transition: var(--card-transition-time);
 }
 
 .card__top{
     padding: 10% 10%;
-    border:  var(--fs-b);
-    border-top-left-radius: var(--fs-br);
-    border-top-right-radius: var(--fs-br);
-
-    transition: var(--fs-ttime);
++    border-bottom:  1px solid var(--card-border-color);
++    border-top-left-radius: var(--card-border-radius);
++    border-top-right-radius: var(--card-border-radius);
++    transition: var(--card-transition-time);
 }
 
 .card__body{
 	text-align: left;
     padding: 5% 5% 0 5%;
 	height: 100%;
-
-	border-left: var(--fs-b);
-	border-bottom: var(--fs-b);
-	border-right: var(--fs-b);
-	border-bottom-left-radius: var(--fs-br);
-    border-bottom-right-radius: var(--fs-br);
-
-    transition: var(--fs-ttime);
-
-}
-
-.card__body__extraborder{
-	border-top: var(--fs-b);
-	border-top-left-radius: var(--fs-br);
-    border-top-right-radius: var(--fs-br);
++    transition: var(--card-transition-time);
 }
 
 .button-wrapper{
 	display:flex;
 	align-items: center;
 	justify-content: center;
-}
-
-/*color related*/
-/*BLUES BLUES BLUES BLUES*/
-.blues > .card > .card__body{
-	background-color:  var(--fs-blue2);
-}
-
-.blues>.card:hover .card__body{
-	transition: var(--fs-ttime);
-	background-color: var(--fs-blue1);
-	box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
-}
-
-.blues > .card > .card__body > .button-wrapper > .button-activities{
-	transition: var(--fs-ttime);
-	background-color: var(--fs-blue3);
-}
-
-.blues>.card:hover .button-wrapper > .button-activities{
-	transition: var(--fs-ttime);
-	background-color:  var(--fs-blue2);
-}
-
-/*GREENS GREENS GREENS GREENS*/
-.greens > .card > .card__body{
-	background-color:  var(--fs-green2);
-}
-
-.greens>.card:hover .card__body{
-	transition: var(--fs-ttime);
-	background-color: var(--fs-green1);
-	box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
-}
-
-.greens > .card > .card__body > .button-activities{
-	transition: var(--fs-ttime);
-	background-color: var(--fs-green3);
-}
-
-.greens>.card:hover .button-activities{
-	transition: var(--fs-ttime);
-	background-color:  var(--fs-green2);
-}
-
-/*PURPLES PURPLES PURPLES PURPLES PURPLES */
-.purples > .card > .card__body{
-	background-color:  var(--fs-purple2);
-}
-
-.purples>.card:hover .card__body{
-	transition: var(--fs-ttime);
-	background-color: var(--fs-purple1);
-	box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
-}
-
-.purples > .card > .card__body > .button-wrapper > .button-activities{
-	transition: var(--fs-ttime);
-	background-color: var(--fs-purple3);
-}
-
-.purples>.card:hover .button-wrapper > .button-activities{
-	transition: var(--fs-ttime);
-	background-color:  var(--fs-purple2);
-}
-
-
-/*other on hover*/
-.card:hover .card__top{
-	transition: var(--fs-ttime);
-	box-shadow: 10px 10px 20px 0 rgba(0,0,0,0.2);
-}
-
-.card:hover .card__body{
-	transition: var(--fs-ttime);
-	box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.2);
-}
-
-.card:hover .card__image{
-	transition: var(--fs-ttime);
-	transform:  scale(1.1);
++	padding-bottom: 5%;
 }
 
 /*button*/
 .card__button__link, .card__button__link:hover{
-	/*text color*/
 	color:  #212529;
     text-decoration: none;
 }
@@ -414,12 +284,14 @@ shade 3:  #ffb3ec
 .button-activities{
     padding: 3%;
     margin: 1.1%;
-    border: 1px solid;
++    border: 1px solid #ccc;
     border-radius: 15px;
-    transition: var(--fs-ttime);
++    background-color: var(--button-bg-color);
++    transition: var(--card-transition-time);
 }
 
 .button-activities:hover{
-    transition: var(--fs-ttime);
-    box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.2);
++    background-color: var(--button-hover-bg-color);
++    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
++
