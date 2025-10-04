@@ -15,6 +15,16 @@ abigail card dark green: #687450;;
 		--fs-h2:  3.75rem;
 		--fs-h3: 1.0rem;
 		--fs-h4:  1.0rem;
++		
++		/* Light theme colors */
++		--bg-color: #faf0e6;
++		--text-color: #212529;
++		--card-bg: #faf0e6;
++		--border-color: #aaaaaa;
++		--social-icon-color: #aaaaaa;
++		--social-icon-hover: #333333;
++		--cursor-color: #c8bcb4;
++		--title-highlight: #edb18d;
 }
 
 
@@ -91,11 +101,25 @@ h4{font-size:  var(--fs-h4);}
 body{
 	font-family: "Sen";
 	line-height:  1.6;
-	background: #faf0e6;
++	background: var(--bg-color);
++	color: var(--text-color);
 	cursor: none;
 	margin: 0;
 	padding:  0;
 	overflow-x: hidden;
++	transition: background-color 0.3s ease, color 0.3s ease;
++}
++
++/* Dark theme */
++[data-theme="dark"] {
++	--bg-color: #1a1a1a;
++	--text-color: #e0e0e0;
++	--card-bg: #2a2a2a;
++	--border-color: #555555;
++	--social-icon-color: #888888;
++	--social-icon-hover: #cccccc;
++	--cursor-color: #666666;
++	--title-highlight: #ff9500;
 }
 
 .row{
@@ -129,7 +153,7 @@ span.titleletter{
 }
 
 span.titleletter.animated{
-	color: #edb18d;
++	color: var(--title-highlight);
 	animation: bounce 0.5s cubic-bezier(.17,-0.58,.61,.95) 2 alternate;
 }
 
@@ -151,7 +175,7 @@ div.cursor div{
 	position: absolute;
 	width: 10px;
 	height: 10px;
-	background-color: #c8bcb4;
++	background-color: var(--cursor-color);
 	border-radius: 50%;
 	box-sizing:  border-box;
 	pointer-events: none;
@@ -164,12 +188,12 @@ ion-icon{
 }
 
 .social-icon{
-	color: #aaaaaa;
++	color: var(--social-icon-color);
 	transition: color 0.2s;
 }
 
 .social-icon:hover{
-	color: #333333;
++	color: var(--social-icon-hover);
 }
 
 /*Animated Line Divider*/
@@ -257,7 +281,7 @@ shade 3:  #ffb3ec
 }
 
 :root{
-	--fs-b: 6px solid #aaaaaa;
++	--fs-b: 6px solid var(--border-color);
 	--fs-br:  20px;
 	--fs-ttime:  0.3s;
 
@@ -277,7 +301,7 @@ shade 3:  #ffb3ec
 .card {
 	border: none;
 	/*pale background color*/
-    background-color: #faf0e6;
++    background-color: var(--card-bg);
     height: 100%;
     margin: 5%;
 }
@@ -423,3 +447,29 @@ shade 3:  #ffb3ec
     transition: var(--fs-ttime);
     box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.2);
 }
++
++/* Theme Toggle Button */
++.theme-toggle-btn {
++    border: 2px solid var(--border-color);
++    background: transparent;
++    color: var(--text-color);
++    padding: 8px 12px;
++    border-radius: 20px;
++    transition: all 0.3s ease;
++    margin-left: 10px;
++}
++
++.theme-toggle-btn:hover {
++    background: var(--border-color);
++    color: var(--bg-color);
++    transform: scale(1.05);
++}
++
++.theme-icon {
++    font-size: 18px;
++    transition: transform 0.3s ease;
++}
++
++[data-theme="dark"] .theme-icon {
++    transform: rotate(180deg);
++}
